@@ -237,11 +237,11 @@ export class EventUserTable extends Component {
                     style={{
                       backgroundColor:
                         rowData.registrationStatus === REGISTRATION_STATUS.CHECKED_IN
-                          ? '#54D26E'
+                          ? COLOR.SOFT_GREEN
                           : rowData.registrationStatus === REGISTRATION_STATUS.WAITLISTED
                             ? '#F7D055'
                             : rowData.registrationStatus === REGISTRATION_STATUS.CANCELLED
-                              ? '#E15453'
+                              ? COLOR.SOFT_RED
                               : COLOR.LIGHT_BACKGROUND_COLOR,
                       paddingLeft: '10px'
                     }}>

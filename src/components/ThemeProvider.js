@@ -37,6 +37,14 @@ const theme = createMuiTheme({
       },
       input: {
         borderColor: COLOR.FONT_COLOR
+      },
+      underline: {
+        '&:before': {
+          borderBottom: `1px solid ${COLOR.WHITE}`
+        },
+        '&:hover:not($disabled):not($error):not($focused):before': {
+          borderBottom: `1px solid ${COLOR.WHITE}`
+        }
       }
     },
     MuiFormLabel: {

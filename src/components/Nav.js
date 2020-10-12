@@ -8,6 +8,7 @@ import ExitToAppIcon from '@material-ui/icons/ExitToApp'
 import AddBoxIcon from '@material-ui/icons/AddBox'
 import DateRangeIcon from '@material-ui/icons/DateRange'
 import PersonIcon from '@material-ui/icons/Person'
+import RedeemIcon from '@material-ui/icons/Redeem'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import { useHistory, withRouter } from 'react-router-dom'
 import { Auth } from 'aws-amplify'
@@ -83,6 +84,11 @@ function Nav (props) {
             icon={<AddBoxIcon style={selectedItem === '/event/new' ? selected : unselected} />}
             onClick={handleItemClick.bind(null, '/event/new')}
             bar={selectedItem === '/event/new' ? barSelected : barUnselected} />
+          <MenuItem
+            label='Prizes'
+            icon={<RedeemIcon style={selectedItem === '/prizes' ? selected : unselected} />}
+            onClick={handleItemClick.bind(null, '/prizes')}
+            bar={selectedItem === '/prizes' ? barSelected : barUnselected} />
           {renderDesktopOnly && <MenuItem
             label='Logout'
             icon={<ExitToAppIcon />}

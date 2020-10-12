@@ -20,6 +20,7 @@ import LoginRedirect from './Authentication/LoginRedirect'
 
 import Forbidden from '../pages/Forbidden'
 import AdminHome from '../pages/admin/AdminHome'
+import AdminPrizes from '../pages/admin/AdminPrizes'
 import UserHome from '../pages/member/UserHome'
 import UserEvents from '../pages/member/UserEvents'
 import EventRegister from '../pages/member/EventRegister'
@@ -149,6 +150,10 @@ class Router extends Component {
               <AdminRoute
                 path='/event/:id' // Need to make sure that this comes after 'new' and 'edit'
                 render={props => <EventView {...props} />} />
+              <AdminRoute
+                path='/prizes'
+                render={() => <AdminPrizes />}
+              />
 
               {/* HOME */}
               <AdminRoute
