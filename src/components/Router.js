@@ -30,6 +30,7 @@ import EventNew from '../pages/admin/EventNew'
 import EventEdit from '../pages/admin/EventEdit'
 import MemberProfile from '../pages/member/MemberProfile'
 import EventDetails from '../pages/member/EventDetails'
+import Sticker from '../pages/admin/Sticker'
 
 import { setUser } from '../actions/UserActions'
 import {
@@ -152,6 +153,9 @@ class Router extends Component {
               <AdminRoute
                 path='/event/:id' // Need to make sure that this comes after 'new' and 'edit'
                 render={props => <EventView {...props} />} />
+              <AdminRoute
+                path='/sticker'
+                render={() => <Sticker />} />
 
               {/* HOME */}
               <AdminRoute

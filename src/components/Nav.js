@@ -8,6 +8,7 @@ import Logout from './Icons/Logout'
 import AddBoxIcon from '@material-ui/icons/AddBox'
 import DateRangeIcon from '@material-ui/icons/DateRange'
 import PersonIcon from '@material-ui/icons/Person'
+import LabelIcon from '@material-ui/icons/Label'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import { useHistory, withRouter } from 'react-router-dom'
 import { Auth } from 'aws-amplify'
@@ -83,6 +84,11 @@ function Nav (props) {
             icon={<AddBoxIcon style={selectedItem === '/event/new' ? selected : unselected} />}
             onClick={handleItemClick.bind(null, '/event/new')}
             bar={selectedItem === '/event/new' ? barSelected : barUnselected} />
+          <MenuItem
+            label='Create Sticker'
+            icon={<LabelIcon style={selectedItem === '/sticker' ? selected : unselected} />}
+            onClick={handleItemClick.bind(null, '/sticker')}
+            bar={selectedItem === '/sticker' ? barSelected : barUnselected} />
           {renderDesktopOnly && <MenuItem
             label='Logout'
             icon={<Logout />}

@@ -3,13 +3,13 @@ import Router from './components/Router'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import ThemeProvider from './components/ThemeProvider'
 
-function App () {
-  return (
-    <ThemeProvider className='App'>
-      <CssBaseline />
-      <Router />
-    </ThemeProvider>
-  )
+function App() {
+    return ( 
+    <ThemeProvider className = 'App' >
+        <CssBaseline />
+        <Router />
+        </ThemeProvider>
+    )
 }
 
 export default App
